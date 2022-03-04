@@ -12,7 +12,7 @@
         "description": "título da página de opções da nCazé"
     },
     "optionsPageActivate": {
-        "message": "nCazé está",
+        "message": "Extensão nCazé está:",
         "description": "Texto ao lado do botão de On-Off"
     },
     "optionsPageContextLink": {
@@ -34,7 +34,7 @@
     }, 
     "openOptionsInfo": {
         "message": "Abra as opções novamente clicando com o botão direito ou clicando em 'opções' dentro de ",
-        "description": "The option in context menu to activate the extension"
+        "description": "Explicação de como abrir o menu de opções"
     }
     
     
