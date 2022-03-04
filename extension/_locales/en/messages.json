@@ -1,0 +1,42 @@
+﻿{
+    "appName": {
+        "message": "nCazé",
+        "description": "O título da extensão, exibida na web store."
+    },
+    "appDesc": {
+        "message": "Troca todas as imagens por imagens do Casimiro.",
+        "description": "Descrição da extensão, exibida na web store."
+    },
+    "optionsHeader": {
+        "message": "Opções nCazé",
+        "description": "título da página de opções da nCazé"
+    },
+    "optionsPageActivate": {
+        "message": "nCazé está",
+        "description": "Texto ao lado do botão de On-Off"
+    },
+    "optionsPageContextLink": {
+        "message": "Mostre \"Desativar nCazé\" ao clicar com o botão direito",
+        "description": "Texto ao lado do botão de On-Off da opção de desativar"
+    },
+    "optionsPageContextLinkActivate": {
+        "message": "Mostre \"Ativar nCazé\" ao clicar com o botão direito",
+        "description": "Texto ao lado do botão de On-Off da opção de ativar"
+    },
+       
+    "contextMenuInactivate": {
+        "message": "Desativar nCazé",
+        "description": "A opção de desativar a extensão"
+    }, 
+    "contextMenuActivate": {
+        "message": "Ativar nCazé",
+        "description": "A opção de ativar a extensão"
+    }, 
+    "openOptionsInfo": {
+        "message": "Abra as opções novamente clicando com o botão direito ou clicando em 'opções' dentro de ",
+        "description": "The option in context menu to activate the extension"
+    }
+    
+    
+}
+
