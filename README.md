@@ -1,7 +1,7 @@
-# rNet
-A clone of the nCage Chrome Extension but the pictures list changed.
+# nCazé
+Um clone da extensão do Chrome nCage mas com a lista de imagens trocada para imagens do Casimiro.
 
-Replaces all images on all page with Random ones.
+Troque todas as imagens de qualquer site por imagens aleatórias.
 
 ## Get the extension
 
