@@ -3,6 +3,10 @@ Um clone da extensão do Chrome nCage mas com a lista de imagens trocada para im
 
 Troque todas as imagens de qualquer site por imagens aleatórias.
 
-## Get the extension
+## Extensão adaptada por:
 
-https://chrome.google.com/webstore/detail/plmihmkfjobickhfhcenobebdckmobfd
+https://github.com/AngeloAlvez
+
+## Extensão utilizada como base: 
+
+https://github.com/AaronLayton/rNet
