@@ -16,11 +16,11 @@
         "description": "Texto ao lado do botão de On-Off"
     },
     "optionsPageContextLink": {
-        "message": "Mostre \"Desativar nCazé\" ao clicar com o botão direito",
+        "message": "Mostre \"Desativar nCazé\" ao clicar com o botão direito - (não recomendável)",
         "description": "Texto ao lado do botão de On-Off da opção de desativar"
     },
     "optionsPageContextLinkActivate": {
-        "message": "Mostre \"Ativar nCazé\" ao clicar com o botão direito",
+        "message": "Mostre \"Ativar nCazé\" ao clicar com o botão direito - (não recomendável)",
         "description": "Texto ao lado do botão de On-Off da opção de ativar"
     },
        
@@ -33,7 +33,7 @@
         "description": "A opção de ativar a extensão"
     }, 
     "openOptionsInfo": {
-        "message": "Abra as opções novamente clicando com o botão direito ou clicando em 'opções' dentro de ",
+        "message": "Abra as opções novamente <strong>clicando com o botão direito</strong> ou clicando em 'opções' dentro de ",
         "description": "Explicação de como abrir o menu de opções"
     }
     
