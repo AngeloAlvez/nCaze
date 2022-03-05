@@ -16,19 +16,11 @@
     "name": "nCazé",
     "short_name": "nCazé",
     "version": "1.0",
-    "icons": { "128": "rnt/logo128.png", "16": "rnet/logo16.png" },
+    "icons": { "128": "rnet/logo128.png", "16": "rnet/logo16.png" },
     "permissions": [
         "storage",
-        "tabs",
-        "contextMenus",
-        "webRequest",
-        "<all_urls>",
-        "http://*/*",
-        "https://*/*",
-        "webNavigation",
-        "webRequestBlocking",
-        "cookies",
-        "storage"],
+        "contextMenus"
+      ],
     "options_page": "rnet/options/options.html",
     "options_ui": {
         "page": "rnet/options/options.html",
