@@ -1,31 +1,42 @@
 {
-"update_url": "https://clients2.google.com/service/update2/crx",
-
+    "update_url": "https://clients2.google.com/service/update2/crx",
     "content_scripts": [
         {
-            "js": [ "lib/jq/jquery-2.1.1.min.js", "lib/ga/analytics.js", "rnet/rnet.js" ],
-            "matches": [ "http://*/*", "https://*/*" ]
+            "js": [
+                "lib/jq/jquery-2.1.1.min.js",
+                "lib/ga/analytics.js",
+                "rnet/rnet.js"
+            ],
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ]
         }
     ],
     "background": {
-        "scripts": [ "rnet/bg.js", "lib/big/bg.js" ]
+        "scripts": [
+            "rnet/bg.js",
+            "lib/big/bg.js"
+        ]
     },
     "description": "Transforma todas as imagens de um site em imagens aleatórias",
-    "default_locale":"en", 
+    "default_locale": "en",
     "manifest_version": 2,
     "name": "nCazé",
     "short_name": "nCazé",
     "version": "1.0",
-    "icons": { "128": "rnet/logo128.png", "16": "rnet/logo16.png" },
+    "icons": {
+        "128": "rnet/logo128.png",
+        "16": "rnet/logo16.png"
+    },
     "permissions": [
         "storage",
         "contextMenus"
-      ],
+    ],
     "options_page": "rnet/options/options.html",
     "options_ui": {
         "page": "rnet/options/options.html",
         "chrome_style": true
     },
     "content_security_policy": "script-src 'self'; object-src 'self'"
-    
 }
