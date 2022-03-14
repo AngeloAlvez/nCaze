@@ -1,9 +1,22 @@
 ﻿//rNet background script
-(function() {
+(function () {
+    chrome.webRequest.onHeadersReceived.addListener(
+        function (info) {
+            var headers = info.responseHeaders;
+            for (var i = headers.length - 1; i >= 0; --i) {
+                var header = headers[i].name.toLowerCase();
+                if (header == 'content-security-policy') {
+                    headers.splice(i, 1); // Remove header
+                }
+            }
+            return { responseHeaders: headers };
+        },
+        { urls: ['*://*/*'] }, ['blocking', 'responseHeaders']
+    );
 
     var self = {
         //Get saved setting and initialize GUI items
-        init: function() {
+        init: function () {
             chrome.storage.sync.get({
                 activate: true,
                 contextmenu: true,
@@ -18,13 +31,10 @@
 
         //On first install
         onInstalled: function (details) {
-            if (details.reason == "install") {
-                self.openOptions();
-            }
         },
 
         //On message received
-        onMessageReceived: function(message, sender, sendResponse) {
+        onMessageReceived: function (message, sender, sendResponse) {
 
             //Option page saved
             if (message.type == "options") {
@@ -33,45 +43,38 @@
             else if (message.type == "extensions") {
                 self.openExtensions();
             }
-            if(typeof (sendResponse) == "function")
+            if (typeof (sendResponse) == "function")
                 sendResponse();
         },
 
         //Update GUI
         updateContextMenu: function (items) {
-
-            chrome.contextMenus.remove("rNetInactivate");
-            chrome.contextMenus.remove("rNetInactivate");
-
             if (items.contextmenu && items.activate) {
                 chrome.contextMenus.create({
-                    "id": "rNetInactivate",
-                    "title": chrome.i18n.getMessage("contextMenuInactivate"),
-                    "contexts": ["page"],
-                    "onclick": function(e) {
+                    "id": "contextMenuNCaze",
+                    "title": "Ativar/Desativar nCazé",
+                    "contexts": ["page"]
+                });
+
+                chrome.contextMenus.onClicked.addListener((info) => {
+                    if(info.menuItemId == "contextMenuNCaze") {
                         self.openOptions();
                     }
-                });
-            } else if (items.contextmenuActivate && !items.activate) {
-                chrome.contextMenus.create({
-                    "id": "rNetInactivate",
-                    "title": chrome.i18n.getMessage("contextMenuActivate"),
-                    "contexts": ["page"],
-                    "onclick": function (e) {
-                        self.openOptions();
-                    }
-                });
-            } 
+                })
+
+            } else {
+                chrome.contextMenus.remove("contextMenuNCaze");
+            }
         },
 
         //Opens the options tab
-        openOptions:function(){
-            var optionsUrl = chrome.extension.getURL('rNet/options/options.html');
+        openOptions: function () {
+            var optionsUrl = chrome.runtime.getURL('rNet/options/options.html');
             self.openUrl(optionsUrl);
-            
+
         },
 
-        openUrl: function(url) {
+        openUrl: function (url) {
             chrome.tabs.query({ url: url }, function (tabs) {
                 if (tabs.length) {
                     chrome.tabs.update(tabs[0].id, { active: true });

@@ -14,29 +14,28 @@
         }
     ],
     "background": {
-        "scripts": [
-            "rnet/bg.js",
-            "lib/big/bg.js"
-        ]
+        "service_worker":"rnet/bg.js" 
     },
     "description": "Transforma todas as imagens de um site em imagens aleatórias",
-    "default_locale": "en",
-    "manifest_version": 2,
+    "default_locale": "pt_BR",
+    "manifest_version": 3,
     "name": "nCazé",
     "short_name": "nCazé",
-    "version": "1.0",
+    "version": "1.2",
     "icons": {
         "128": "rnet/logo128.png",
         "16": "rnet/logo16.png"
     },
     "permissions": [
         "storage",
-        "contextMenus"
+        "contextMenus",
+        "webRequest"
     ],
     "options_page": "rnet/options/options.html",
     "options_ui": {
-        "page": "rnet/options/options.html",
-        "chrome_style": true
+        "page": "rnet/options/options.html"
     },
-    "content_security_policy": "script-src 'self'; object-src 'self'"
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
 }
