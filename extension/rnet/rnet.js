@@ -65,7 +65,8 @@ function main() {
                 'https://pbs.twimg.com/media/FBMeSM9WEAgfvOV.jpg',
                 'https://pbs.twimg.com/media/E-eMXVFWUAMBf9W.png',
                 'https://pbs.twimg.com/media/FHLnYPZX0AUNKd3?format=jpg&name=large',
-                'https://i.ytimg.com/vi/IVqDeAbomMU/maxresdefault.jpg'
+                'https://i.ytimg.com/vi/IVqDeAbomMU/maxresdefault.jpg',
+                'https://img.r7.com/images/caze-casimiro-25012022132843736'
             ],
 
             //Handles all images on page with an interval of time
